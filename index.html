@@ -53,16 +53,23 @@
         <p class="text-message">Tỏ chúc Nhít có một ngày 8/3 vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời nha. Tặng Nhít một bó hoa nhíe ❤️</p>
     </div>
     
-    <audio id="bg-music" src="https://raw.githubusercontent.com/dota031/dota031/main/openarms.mp3"></audio>
+    <audio id="bg-music" src="openarms.mp3" preload="auto" playsinline></audio>
     
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("bg-music");
+            audio.muted = true;
+            audio.play().catch(() => console.log("Autoplay bị chặn, cần tương tác."));
+        });
+        
         function openLetter() {
             document.querySelector('.envelope').style.display = 'none';
             document.getElementById('message').style.display = 'block';
             
-            // Phát nhạc khi mở thư
+            // Bật tiếng và phát nhạc khi mở thư
             const audio = document.getElementById("bg-music");
-            audio.play().catch(error => console.log("Autoplay bị chặn: ", error));
+            audio.muted = false;
+            audio.play().catch(error => console.log("Không thể phát nhạc: ", error));
         }
     </script>
 </body>
