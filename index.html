@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thư Gửi em ❤️</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Thư bí mật</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f1e4;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .envelope {
+            width: 300px;
+            height: 200px;
+            background: #c0392b;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="envelope" onclick="openLetter()">
-        <div class="flap"></div>
-        <div class="letter">
-            <h2>Gửi Nhít ❤️</h2>
-            <p>Chúc em có một ngày 8/3 vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời như một đóa hoa nha! ❤️</p>
-            <img src="images/love.jpg" alt="Hình ảnh của chúng ta">
-        </div>
+        Nhấn để mở thư
     </div>
-
-    <!-- Nút bật nhạc nếu bị chặn -->
-    <button id="playMusic" onclick="playMusic()">🎵 Bật Nhạc</button>
-
-    <!-- Nhạc -->
-    <audio id="music" loop>
-        <source src="https://raw.githubusercontent.com/dota031/Love-Letter/main/open-arms.mp3" type="audio/mpeg">
-    </audio>
-
-    <script src="script.js"></script>
+    <div class="message" id="message">
+        <p>Lời nhắn yêu thương gửi đến bạn! ❤️</p>
+        <img src="your-image.jpg" alt="Hình ảnh kỷ niệm">
+        <audio controls autoplay>
+            <source src="your-music.mp3" type="audio/mp3">
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+        </audio>
+    </div>
+    <script>
+        function openLetter() {
+            document.querySelector('.envelope').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
