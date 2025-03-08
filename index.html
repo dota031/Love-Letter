@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thư Gửi Nhít ❤️</title>
+    <title>Thư Gửi Nhi ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="envelope" onclick="openLetter()">
+    <div class="envelope">
         <div class="flap"></div>
         <div class="letter">
-            <h2>Gửi Nhít ❤️</h2>
-            <p>Chúc em có một ngày 8/3 vui vẻ,hạnh phúc và mãi xinh đẹp rạng ngời như một đóa hoa nha ❤️</p>
-            <img src="images/love.jpg" alt="Tặng em một bó hoa nha">
+            <h2>Gửi Nhi ❤️</h2>
+            <p>Chúc em có một ngày 8/3 vui vẻ và hạnh phúc, mãi xinh đẹp rạng ngời như một đóa hoa nha! ❤️</p>
+            <img src="images/love.jpg" alt="Hình ảnh của chúng ta">
         </div>
     </div>
 
-    <!-- Phát nhạc tự động -->
-    <audio id="music" autoplay loop>
-        <source src="https://raw.githubusercontent.com/dota031/Love-Letter/main/SZA - Open Arms (Official Audio) ft. Travis Scott.mp3" type="audio/mpeg">
+    <!-- Nút bật nhạc nếu autoplay bị chặn -->
+    <button id="playMusic" onclick="playMusic()">🎵 Bật Nhạc</button>
+
+    <!-- Nhạc MP3 -->
+    <audio id="music" loop>
+        <source src="https://raw.githubusercontent.com/dota031/Love-Letter/main/open-arms.mp3" type="audio/mpeg">
     </audio>
 
     <script src="script.js"></script>
