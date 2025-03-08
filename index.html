@@ -49,22 +49,20 @@
         Nhấn để mở thư
     </div>
     <div class="message" id="message">
-        <img src="your-image.jpg" alt="Hình ảnh kỷ niệm">
+        <img src="love.jpg" alt="Hình ảnh kỷ niệm">
         <p class="text-message">Tỏ chúc Nhít có một ngày 8/3 vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời nha. Tặng Nhít một bó hoa nhíe ❤️</p>
     </div>
+    
+    <audio id="bg-music" src="https://raw.githubusercontent.com/dota031/dota031/main/openarms.mp3"></audio>
+    
     <script>
         function openLetter() {
             document.querySelector('.envelope').style.display = 'none';
             document.getElementById('message').style.display = 'block';
             
-            // Tạo iframe phát nhạc khi mở thư
-            const iframe = document.createElement("iframe");
-            iframe.src = "https://www.youtube.com/embed/JLd09jmEAYA?autoplay=1&loop=1&playlist=JLd09jmEAYA";
-            iframe.allow = "autoplay";
-            iframe.style.width = "0";
-            iframe.style.height = "0";
-            iframe.style.border = "none";
-            document.body.appendChild(iframe);
+            // Phát nhạc khi mở thư
+            const audio = document.getElementById("bg-music");
+            audio.play().catch(error => console.log("Autoplay bị chặn: ", error));
         }
     </script>
 </body>
