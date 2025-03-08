@@ -49,14 +49,22 @@
         Nhấn để mở thư
     </div>
     <div class="message" id="message">
-        <img src="love.jpg" alt="Hình ảnh kỷ niệm">
-        <p class="text-message">Chúc Nhít có một ngày 8/3 vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời như một đóa hoa ạ ❤️</p>
-        <iframe src="https://www.youtube.com/embed/JLd09jmEAYA?autoplay=1&loop=1&playlist=JLd09jmEAYA" frameborder="0" allow="autoplay" style="width: 0; height: 0; border: none;"></iframe>
+        <img src="your-image.jpg" alt="Hình ảnh kỷ niệm">
+        <p class="text-message">Tỏ chúc Nhít có một ngày 8/3 vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời nha. Tặng Nhít một bó hoa nhíe ❤️</p>
     </div>
     <script>
         function openLetter() {
             document.querySelector('.envelope').style.display = 'none';
             document.getElementById('message').style.display = 'block';
+            
+            // Tạo iframe phát nhạc khi mở thư
+            const iframe = document.createElement("iframe");
+            iframe.src = "https://www.youtube.com/embed/JLd09jmEAYA?autoplay=1&loop=1&playlist=JLd09jmEAYA";
+            iframe.allow = "autoplay";
+            iframe.style.width = "0";
+            iframe.style.height = "0";
+            iframe.style.border = "none";
+            document.body.appendChild(iframe);
         }
     </script>
 </body>
